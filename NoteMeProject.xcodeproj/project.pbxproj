@@ -13,9 +13,13 @@
 		CE2BFB052AE042EE0024FFCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB032AE042EE0024FFCE /* Main.storyboard */; };
 		CE2BFB072AE042F00024FFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB062AE042F00024FFCE /* Assets.xcassets */; };
 		CE2BFB0A2AE042F00024FFCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB082AE042F00024FFCE /* LaunchScreen.storyboard */; };
+		FE8651E1B1DD4841AD7316F9 /* Pods_NoteMeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC929DA1518B54FDD95C0A5 /* Pods_NoteMeProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F7DCDBE72AB6E988AE4C48C /* Pods-NoteMeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteMeProject.debug.xcconfig"; path = "Target Support Files/Pods-NoteMeProject/Pods-NoteMeProject.debug.xcconfig"; sourceTree = "<group>"; };
+		749FA97F1AA65CA09B0DDEA3 /* Pods-NoteMeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteMeProject.release.xcconfig"; path = "Target Support Files/Pods-NoteMeProject/Pods-NoteMeProject.release.xcconfig"; sourceTree = "<group>"; };
+		7BC929DA1518B54FDD95C0A5 /* Pods_NoteMeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteMeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2BFAFA2AE042EE0024FFCE /* NoteMeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE8651E1B1DD4841AD7316F9 /* Pods_NoteMeProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BAB54BA969F0D492026E984 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BC929DA1518B54FDD95C0A5 /* Pods_NoteMeProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19C05933AB8FA1F74719DA7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F7DCDBE72AB6E988AE4C48C /* Pods-NoteMeProject.debug.xcconfig */,
+				749FA97F1AA65CA09B0DDEA3 /* Pods-NoteMeProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE2BFAF12AE042EE0024FFCE = {
 			isa = PBXGroup;
 			children = (
 				CE2BFAFC2AE042EE0024FFCE /* NoteMeProject */,
 				CE2BFAFB2AE042EE0024FFCE /* Products */,
+				19C05933AB8FA1F74719DA7B /* Pods */,
+				0BAB54BA969F0D492026E984 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2BFB0E2AE042F00024FFCE /* Build configuration list for PBXNativeTarget "NoteMeProject" */;
 			buildPhases = (
+				BB9F15E2C57CC8B4D6184DA1 /* [CP] Check Pods Manifest.lock */,
 				CE2BFAF62AE042EE0024FFCE /* Sources */,
 				CE2BFAF72AE042EE0024FFCE /* Frameworks */,
 				CE2BFAF82AE042EE0024FFCE /* Resources */,
+				351FAB482D9CDAC95F772737 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		351FAB482D9CDAC95F772737 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoteMeProject/Pods-NoteMeProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoteMeProject/Pods-NoteMeProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoteMeProject/Pods-NoteMeProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB9F15E2C57CC8B4D6184DA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoteMeProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE2BFAF62AE042EE0024FFCE /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		CE2BFB0F2AE042F00024FFCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F7DCDBE72AB6E988AE4C48C /* Pods-NoteMeProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		CE2BFB102AE042F00024FFCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749FA97F1AA65CA09B0DDEA3 /* Pods-NoteMeProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
