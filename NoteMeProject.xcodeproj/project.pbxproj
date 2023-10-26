@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		CE2BFAFE2AE042EE0024FFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */; };
 		CE2BFB002AE042EE0024FFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */; };
-		CE2BFB022AE042EE0024FFCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFB012AE042EE0024FFCE /* ViewController.swift */; };
-		CE2BFB052AE042EE0024FFCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB032AE042EE0024FFCE /* Main.storyboard */; };
 		CE2BFB072AE042F00024FFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB062AE042F00024FFCE /* Assets.xcassets */; };
 		CE2BFB0A2AE042F00024FFCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB082AE042F00024FFCE /* LaunchScreen.storyboard */; };
+		CEE7D5722AEADB23009769C4 /* UIColor + Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7D5712AEADB23009769C4 /* UIColor + Consts.swift */; };
+		CEE7D5742AEADD72009769C4 /* UIFont + Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7D5732AEADD72009769C4 /* UIFont + Consts.swift */; };
+		CEE7D5762AEADEDC009769C4 /* UIImage + Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7D5752AEADEDC009769C4 /* UIImage + Consts.swift */; };
 		FE8651E1B1DD4841AD7316F9 /* Pods_NoteMeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC929DA1518B54FDD95C0A5 /* Pods_NoteMeProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +24,12 @@
 		CE2BFAFA2AE042EE0024FFCE /* NoteMeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE2BFB012AE042EE0024FFCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE2BFB042AE042EE0024FFCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE2BFB062AE042F00024FFCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2BFB092AE042F00024FFCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE2BFB0B2AE042F00024FFCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE7D5712AEADB23009769C4 /* UIColor + Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Consts.swift"; sourceTree = "<group>"; };
+		CEE7D5732AEADD72009769C4 /* UIFont + Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Consts.swift"; sourceTree = "<group>"; };
+		CEE7D5752AEADEDC009769C4 /* UIImage + Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Consts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,6 @@
 				3F7DCDBE72AB6E988AE4C48C /* Pods-NoteMeProject.debug.xcconfig */,
 				749FA97F1AA65CA09B0DDEA3 /* Pods-NoteMeProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +82,40 @@
 		CE2BFAFC2AE042EE0024FFCE /* NoteMeProject */ = {
 			isa = PBXGroup;
 			children = (
-				CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */,
-				CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */,
-				CE2BFB012AE042EE0024FFCE /* ViewController.swift */,
-				CE2BFB032AE042EE0024FFCE /* Main.storyboard */,
-				CE2BFB062AE042F00024FFCE /* Assets.xcassets */,
-				CE2BFB082AE042F00024FFCE /* LaunchScreen.storyboard */,
+				CEE7D56D2AEADA15009769C4 /* App */,
+				CEE7D56E2AEADA27009769C4 /* Resource */,
 				CE2BFB0B2AE042F00024FFCE /* Info.plist */,
 			);
 			path = NoteMeProject;
+			sourceTree = "<group>";
+		};
+		CEE7D56D2AEADA15009769C4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */,
+				CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CEE7D56E2AEADA27009769C4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CEE7D5702AEADB03009769C4 /* Consts */,
+				CE2BFB082AE042F00024FFCE /* LaunchScreen.storyboard */,
+				CE2BFB062AE042F00024FFCE /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CEE7D5702AEADB03009769C4 /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				CEE7D5712AEADB23009769C4 /* UIColor + Consts.swift */,
+				CEE7D5732AEADD72009769C4 /* UIFont + Consts.swift */,
+				CEE7D5752AEADEDC009769C4 /* UIImage + Consts.swift */,
+			);
+			path = Consts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +180,6 @@
 			files = (
 				CE2BFB0A2AE042F00024FFCE /* LaunchScreen.storyboard in Resources */,
 				CE2BFB072AE042F00024FFCE /* Assets.xcassets in Resources */,
-				CE2BFB052AE042EE0024FFCE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2BFB022AE042EE0024FFCE /* ViewController.swift in Sources */,
 				CE2BFAFE2AE042EE0024FFCE /* AppDelegate.swift in Sources */,
+				CEE7D5722AEADB23009769C4 /* UIColor + Consts.swift in Sources */,
+				CEE7D5762AEADEDC009769C4 /* UIImage + Consts.swift in Sources */,
+				CEE7D5742AEADD72009769C4 /* UIFont + Consts.swift in Sources */,
 				CE2BFB002AE042EE0024FFCE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,14 +243,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE2BFB032AE042EE0024FFCE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE2BFB042AE042EE0024FFCE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE2BFB082AE042F00024FFCE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,9 +381,9 @@
 				INFOPLIST_FILE = NoteMeProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,9 +410,9 @@
 				INFOPLIST_FILE = NoteMeProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
