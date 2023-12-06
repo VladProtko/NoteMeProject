@@ -16,6 +16,11 @@ final class LoginVC: UIViewController {
         return view
     }()
     
+    private lazy var loginButton: UIButton = .yellowRoundedButton("Login")
+    private lazy var newAccountButton: UIButton = .underlineYellowButton("New Account")
+    private lazy var forgotPasswordtButton: UIButton = .underlineGrayButton("Forgot Password")
+    
+    private lazy var cancelButton: UIButton = .cancelButton()
     private lazy var logoImageView: UIImageView = UIImageView(image: .General.logo)
     
     
@@ -31,6 +36,11 @@ final class LoginVC: UIViewController {
         view.addSubview(contentView)
         
         contentView.addSubview(logoImageView)
+        
+        contentView.addSubview(loginButton)
+        contentView.addSubview(newAccountButton)
+        contentView.addSubview(forgotPasswordtButton)
+
     }
     
     private func setupConstrains() {

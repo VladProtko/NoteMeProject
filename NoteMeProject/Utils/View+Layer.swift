@@ -14,7 +14,7 @@ extension UIView {
         set { layer.cornerRadius = newValue }
     }
     
-    func seBoreder(width: CGFloat, color: UIColor) {
+    func setBoreder(width: CGFloat, color: UIColor) {
         layer.borderWidth = width
         layer.borderColor = color.cgColor
     }
