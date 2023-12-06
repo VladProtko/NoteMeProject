@@ -23,6 +23,12 @@ final class LoginVC: UIViewController {
     private lazy var cancelButton: UIButton = .cancelButton()
     private lazy var logoImageView: UIImageView = UIImageView(image: .General.logo)
     
+    private lazy var infoView: UIView = {
+        var view = UIView()
+        view.cornerRadius = 5
+        view.backgroundColor = .white
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +45,9 @@ final class LoginVC: UIViewController {
         
         contentView.addSubview(loginButton)
         contentView.addSubview(newAccountButton)
-        contentView.addSubview(forgotPasswordtButton)
+        
+        contentView.addSubview(infoView)
+        infoView.addSubview(forgotPasswordtButton)
 
     }
     
@@ -47,7 +55,7 @@ final class LoginVC: UIViewController {
         contentView.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            make.bottom.equalTo(loginButton.snp.centerY)
 
         }
         
@@ -56,5 +64,29 @@ final class LoginVC: UIViewController {
             make.centerX.equalToSuperview()
             make.size.equalTo(96.0)
         }
+        
+        newAccountButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(8.0)
+            make.horizontalEdges.equalToSuperview().inset(20.0)
+            make.height.equalTo(20.0)
+        }
+        
+        loginButton.snp.makeConstraints { make in
+            make.bottom.equalTo(newAccountButton.snp.top).inset(-8.0)
+            make.horizontalEdges.equalToSuperview().inset(20.0)
+            make.height.equalTo(45.0)
+        }
+        
+        infoView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.horizontalEdges.equalToSuperview().inset(16.0)
+            make.height.equalTo(200.0)
+        }
+        
+        forgotPasswordtButton.snp.makeConstraints { make in
+            make.bottom.left.equalToSuperview().inset(16.0)
+            make.height.equalTo(17.0)
+        }
+
     }
 }
