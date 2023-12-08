@@ -30,6 +30,13 @@ final class LoginVC: UIViewController {
         return view
     }()
     
+    private lazy var emailTextField: LineTextField = {
+        var textField = LineTextField()
+        textField.title = "E-mail"
+        textField.placeHolder = "Enter E-mail"
+        return textField
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -48,7 +55,7 @@ final class LoginVC: UIViewController {
         
         contentView.addSubview(infoView)
         infoView.addSubview(forgotPasswordtButton)
-
+        infoView.addSubview(emailTextField)
     }
     
     private func setupConstrains() {
@@ -80,12 +87,16 @@ final class LoginVC: UIViewController {
         infoView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.horizontalEdges.equalToSuperview().inset(16.0)
-            make.height.equalTo(200.0)
         }
         
         forgotPasswordtButton.snp.makeConstraints { make in
             make.bottom.left.equalToSuperview().inset(16.0)
             make.height.equalTo(17.0)
+        }
+        
+        emailTextField.snp.makeConstraints { make in
+            make.horizontalEdges.top.equalToSuperview().inset(16.0)
+            make.bottom.equalTo(forgotPasswordtButton.snp.top).inset(-20.0)
         }
 
     }

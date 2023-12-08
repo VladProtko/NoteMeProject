@@ -94,19 +94,19 @@ final class LineTextField: UIView {
         }
         
         textField.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).inset(4.0)
+            make.top.equalTo(titleLabel.snp.bottom).inset(-4.0)
             make.horizontalEdges.equalToSuperview()
         }
         
         separator.snp.makeConstraints { make in
-            make.top.equalTo(textField.snp.bottom).inset(4.0)
+            make.top.equalTo(textField.snp.bottom).inset(-4.0)
             make.horizontalEdges.equalToSuperview()
             make.height.equalTo(1.0)
         }
         
         errorLabel.snp.makeConstraints { make in
             make.bottom.horizontalEdges.equalToSuperview()
-            make.top.equalTo(separator.snp.bottom).inset(4.0)
+            make.top.equalTo(separator.snp.bottom).inset(-4.0)
         }
     }
 }
