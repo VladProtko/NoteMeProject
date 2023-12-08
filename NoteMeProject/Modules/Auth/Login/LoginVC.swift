@@ -150,6 +150,5 @@ final class LoginVC: UIViewController {
     
     @objc private func forgotPasswordDidTap() {
         viewModel.forgotPasswordDidTap(email: emailTextField.text)
-        
     }
 }

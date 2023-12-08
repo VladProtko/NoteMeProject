@@ -13,6 +13,8 @@
 		803F04AC2B23398700A8637F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 803F04AE2B23398700A8637F /* Localizable.strings */; };
 		803F04B12B233B1400A8637F /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803F04B02B233B1400A8637F /* String+Localizable.swift */; };
 		803F04B32B2349F000A8637F /* UIButton+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803F04B22B2349F000A8637F /* UIButton+Actions.swift */; };
+		803F04B52B234DAF00A8637F /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803F04B42B234DAF00A8637F /* LoginVM.swift */; };
+		803F04B72B234E2300A8637F /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803F04B62B234E2300A8637F /* LoginAssembler.swift */; };
 		CE2BFAFE2AE042EE0024FFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */; };
 		CE2BFB002AE042EE0024FFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */; };
 		CE2BFB072AE042F00024FFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB062AE042F00024FFCE /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		803F04AF2B23399600A8637F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		803F04B02B233B1400A8637F /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		803F04B22B2349F000A8637F /* UIButton+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Actions.swift"; sourceTree = "<group>"; };
+		803F04B42B234DAF00A8637F /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		803F04B62B234E2300A8637F /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
 		CE2BFAFA2AE042EE0024FFCE /* NoteMeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				CE9005CE2B1F219800B3EED9 /* LoginVC.swift */,
+				803F04B42B234DAF00A8637F /* LoginVM.swift */,
+				803F04B62B234E2300A8637F /* LoginAssembler.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -312,7 +318,9 @@
 				8016D0A62B20A36600BD8846 /* View+Layer.swift in Sources */,
 				CEE7D5722AEADB23009769C4 /* UIColor + Consts.swift in Sources */,
 				CE9005CF2B1F219800B3EED9 /* LoginVC.swift in Sources */,
+				803F04B52B234DAF00A8637F /* LoginVM.swift in Sources */,
 				CEE7D5762AEADEDC009769C4 /* UIImage + Consts.swift in Sources */,
+				803F04B72B234E2300A8637F /* LoginAssembler.swift in Sources */,
 				CEE7D5742AEADD72009769C4 /* UIFont + Consts.swift in Sources */,
 				CE2BFB002AE042EE0024FFCE /* SceneDelegate.swift in Sources */,
 			);

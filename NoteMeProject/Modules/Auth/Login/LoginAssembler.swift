@@ -5,4 +5,15 @@
 //  Created by Sergeenko on 08/12/2023.
 //
 
-import Foundation
+import UIKit
+
+final class LoginAssembler {
+    
+    private init() {}
+    
+    static func make() -> UIViewController {
+        let vm = LoginVM()
+        
+        return LoginVC(viewModel: vm)
+    }    
+}
