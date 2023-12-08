@@ -51,6 +51,21 @@ final class LineTextField: UIView {
         set { errorLabel.text = newValue }
     }
     
+    var placeHolder: String? {
+        get { textField.placeholder }
+        set { textField.placeholder = newValue }
+    }
+    
+    var text: String? {
+        get { textField.text }
+        set { textField.text = newValue }
+    }
+    
+    var delegate: UITextFieldDelegate? {
+        get { textField.delegate }
+        set { textField.delegate = newValue }
+    }
+    
     init() {
         super.init(frame: .zero)
         commonInit()
