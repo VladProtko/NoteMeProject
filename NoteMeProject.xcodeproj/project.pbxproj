@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8016D0A62B20A36600BD8846 /* View+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016D0A52B20A36600BD8846 /* View+Layer.swift */; };
 		8016D0A92B20A47200BD8846 /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8016D0A82B20A47200BD8846 /* UIButton+Styles.swift */; };
+		803F04A72B231FDF00A8637F /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803F04A62B231FDF00A8637F /* LineTextField.swift */; };
 		CE2BFAFE2AE042EE0024FFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */; };
 		CE2BFB002AE042EE0024FFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */; };
 		CE2BFB072AE042F00024FFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB062AE042F00024FFCE /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		7BC929DA1518B54FDD95C0A5 /* Pods_NoteMeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteMeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8016D0A52B20A36600BD8846 /* View+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Layer.swift"; sourceTree = "<group>"; };
 		8016D0A82B20A47200BD8846 /* UIButton+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
+		803F04A62B231FDF00A8637F /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 		CE2BFAFA2AE042EE0024FFCE /* NoteMeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		803F04A52B231FB100A8637F /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				803F04A62B231FDF00A8637F /* LineTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		CE2BFAF12AE042EE0024FFCE = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE7D56D2AEADA15009769C4 /* App */,
+				803F04A52B231FB100A8637F /* Custom */,
 				CE2BFB0B2AE042F00024FFCE /* Info.plist */,
 				CE9005CB2B1F20FE00B3EED9 /* Modules */,
 				CEE7D56E2AEADA27009769C4 /* Resource */,
@@ -282,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2BFAFE2AE042EE0024FFCE /* AppDelegate.swift in Sources */,
+				803F04A72B231FDF00A8637F /* LineTextField.swift in Sources */,
 				8016D0A92B20A47200BD8846 /* UIButton+Styles.swift in Sources */,
 				8016D0A62B20A36600BD8846 /* View+Layer.swift in Sources */,
 				CEE7D5722AEADB23009769C4 /* UIColor + Consts.swift in Sources */,
