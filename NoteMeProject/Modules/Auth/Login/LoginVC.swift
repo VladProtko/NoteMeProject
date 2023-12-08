@@ -8,6 +8,12 @@
 import UIKit
 import SnapKit
 
+protocol LoginViewModelProtocol {
+    func loginDidTap(email: String?, password: String?)
+    func newAccountDidTap()
+    func forgotPasswordDidTap(email: String?)
+}
+
 final class LoginVC: UIViewController {
     
     private lazy var contentView: UIView = {
@@ -16,9 +22,17 @@ final class LoginVC: UIViewController {
         return view
     }()
     
-    private lazy var loginButton: UIButton = .yellowRoundedButton("Login")
-    private lazy var newAccountButton: UIButton = .underlineYellowButton("New Account")
-    private lazy var forgotPasswordtButton: UIButton = .underlineGrayButton("Forgot Password")
+    private lazy var loginButton: UIButton = 
+        .yellowRoundedButton("Login")
+        .withAction(self, #selector(loginDidTap))
+    
+    private lazy var newAccountButton: UIButton = 
+        .underlineYellowButton("New Account")
+        .withAction(self, #selector(newAccountDidTap))
+    
+    private lazy var forgotPasswordtButton: UIButton = 
+        .underlineGrayButton("Forgot Password")
+        .withAction(self, #selector(forgotPasswordDidTap))
     
     private lazy var cancelButton: UIButton = .cancelButton()
     private lazy var logoImageView: UIImageView = UIImageView(image: .General.logo)
@@ -36,6 +50,24 @@ final class LoginVC: UIViewController {
         textField.placeHolder = "Enter E-mail"
         return textField
     }()
+    
+    private lazy var passwordTextField: LineTextField = {
+        var textField = LineTextField()
+        textField.title = "Password"
+        textField.placeHolder = "Enter Password"
+        return textField
+    }()
+    
+    private var viewModel: LoginViewModelProtocol
+
+    init(viewModel: LoginViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +88,7 @@ final class LoginVC: UIViewController {
         contentView.addSubview(infoView)
         infoView.addSubview(forgotPasswordtButton)
         infoView.addSubview(emailTextField)
+        infoView.addSubview(passwordTextField)
     }
     
     private func setupConstrains() {
@@ -96,8 +129,27 @@ final class LoginVC: UIViewController {
         
         emailTextField.snp.makeConstraints { make in
             make.horizontalEdges.top.equalToSuperview().inset(16.0)
+            make.bottom.equalTo(passwordTextField.snp.top).inset(-20.0)
+        }
+        
+        passwordTextField.snp.makeConstraints { make in
+            make.top.equalTo(emailTextField.snp.bottom).inset(-20.0)
+            make.horizontalEdges.equalTo(emailTextField.snp.horizontalEdges)
             make.bottom.equalTo(forgotPasswordtButton.snp.top).inset(-20.0)
         }
-
+    }
+    
+    @objc private func loginDidTap() {
+        viewModel.loginDidTap(email: emailTextField.text,
+                              password: passwordTextField.text)
+    }
+    
+    @objc private func newAccountDidTap() {
+        viewModel.newAccountDidTap()
+    }
+    
+    @objc private func forgotPasswordDidTap() {
+        viewModel.forgotPasswordDidTap(email: emailTextField.text)
+        
     }
 }
