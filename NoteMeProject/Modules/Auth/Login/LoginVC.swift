@@ -9,6 +9,9 @@ import UIKit
 import SnapKit
 
 protocol LoginViewModelProtocol {
+    var catchEmailError: ((String) -> Void)? { get set }
+    var catchPasswordError: ((String) -> Void)? { get set }
+
     func loginDidTap(email: String?, password: String?)
     func newAccountDidTap()
     func forgotPasswordDidTap(email: String?)
@@ -64,6 +67,7 @@ final class LoginVC: UIViewController {
     init(viewModel: LoginViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -74,6 +78,16 @@ final class LoginVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupConstrains()
+    }
+    
+    private func bind() {
+        viewModel.catchEmailError = { errorText in
+            self.emailTextField.errorText = errorText
+        }
+        
+        viewModel.catchPasswordError = { errorText in
+            self.passwordTextField.errorText = errorText
+        }
     }
     
     private func setupUI() {

@@ -12,7 +12,8 @@ final class LoginAssembler {
     private init() {}
     
     static func make() -> UIViewController {
-        let vm = LoginVM(authService: TESTAuthService())
+        let vm = LoginVM(authService: TESTAuthService(), 
+                         inputValidator: InputValidator())
         
         return LoginVC(viewModel: vm)
     }    
