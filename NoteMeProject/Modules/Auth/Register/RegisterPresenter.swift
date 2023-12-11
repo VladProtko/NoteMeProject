@@ -5,4 +5,18 @@
 //  Created by Sergeenko on 11/12/2023.
 //
 
-import Foundation
+import UIKit
+
+protocol RegisterPresenterDelegate: AnyObject {
+    
+}
+
+
+final class RegisterPresenter: RegisterPresenterProtocol {
+    
+    func registerDidTap(email: String?, password: String?, repeatPassword: String?) {
+        
+    }
+    
+    func haveAccountDidTap() { }
+}

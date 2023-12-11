@@ -19,6 +19,7 @@
 		80EAA8492B272DAD00468DAD /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA8482B272DAD00468DAD /* InputValidator.swift */; };
 		80EAA84C2B2734D900468DAD /* InputValidator+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA84B2B2734D900468DAD /* InputValidator+Login.swift */; };
 		80EAA84F2B2742D500468DAD /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA84E2B2742D500468DAD /* RegisterVC.swift */; };
+		80EAA8512B274DA400468DAD /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA8502B274DA400468DAD /* RegisterPresenter.swift */; };
 		CE2BFAFE2AE042EE0024FFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */; };
 		CE2BFB002AE042EE0024FFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */; };
 		CE2BFB072AE042F00024FFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB062AE042F00024FFCE /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		80EAA8482B272DAD00468DAD /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 		80EAA84B2B2734D900468DAD /* InputValidator+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Login.swift"; sourceTree = "<group>"; };
 		80EAA84E2B2742D500468DAD /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		80EAA8502B274DA400468DAD /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		CE2BFAFA2AE042EE0024FFCE /* NoteMeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				80EAA84E2B2742D500468DAD /* RegisterVC.swift */,
+				80EAA8502B274DA400468DAD /* RegisterPresenter.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				803F04B52B234DAF00A8637F /* LoginVM.swift in Sources */,
 				80EAA8492B272DAD00468DAD /* InputValidator.swift in Sources */,
 				CEE7D5762AEADEDC009769C4 /* UIImage + Consts.swift in Sources */,
+				80EAA8512B274DA400468DAD /* RegisterPresenter.swift in Sources */,
 				803F04B72B234E2300A8637F /* LoginAssembler.swift in Sources */,
 				CEE7D5742AEADD72009769C4 /* UIFont + Consts.swift in Sources */,
 				CE2BFB002AE042EE0024FFCE /* SceneDelegate.swift in Sources */,
