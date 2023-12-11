@@ -8,6 +8,11 @@
 import UIKit
 import SnapKit
 
+@objc protocol RegisterPresenterProtocol: AnyObject {
+    func registerDidTap(email: String?, password: String?, repeatPassword: String?)
+    @objc func haveAccountDidTap()
+}
+
 final class RegisterVC: UIViewController {
     
     private lazy var contentView: UIView = {
@@ -16,15 +21,14 @@ final class RegisterVC: UIViewController {
         return view
     }()
     
-    private lazy var loginButton: UIButton =
+    private lazy var registerButton: UIButton =
         .yellowRoundedButton("Register")
-        .withAction(self, #selector(loginDidTap))
+        .withAction(self, #selector(registerDidTap))
     
-    private lazy var newAccountButton: UIButton =
+    private lazy var haveAccountButton: UIButton =
         .underlineYellowButton("I have an Account")
-        //.withAction(viewModel, #selector(LoginViewModelProtocol.newAccountDidTap))
-    
-   
+        .withAction(presenter, #selector(RegisterPresenterProtocol.haveAccountDidTap))
+        
     
     private lazy var cancelButton: UIButton = .cancelButton()
     private lazy var logoImageView: UIImageView = UIImageView(image: .General.logo)
@@ -58,17 +62,17 @@ final class RegisterVC: UIViewController {
         return textField
     }()
     
-//    private var viewModel: LoginViewModelProtocol
-//
-//    init(viewModel: LoginViewModelProtocol) {
-//        self.viewModel = viewModel
-//        super.init(nibName: nil, bundle: nil)
-//        bind()
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    private var presenter: RegisterPresenterProtocol
+
+    init(presenter: RegisterPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+        bind()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,8 +93,8 @@ final class RegisterVC: UIViewController {
     private func setupUI() {
         view.backgroundColor = .appBlack
         view.addSubview(contentView)
-        view.addSubview(loginButton)
-        view.addSubview(newAccountButton)
+        view.addSubview(registerButton)
+        view.addSubview(haveAccountButton)
         
         contentView.addSubview(logoImageView)
         contentView.addSubview(titleLabel)
@@ -105,7 +109,7 @@ final class RegisterVC: UIViewController {
         contentView.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.bottom.equalTo(loginButton.snp.centerY)
+            make.bottom.equalTo(registerButton.snp.centerY)
         }
         
         logoImageView.snp.makeConstraints { make in
@@ -114,14 +118,14 @@ final class RegisterVC: UIViewController {
             make.size.equalTo(96.0)
         }
         
-        newAccountButton.snp.makeConstraints { make in
+        haveAccountButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(8.0)
             make.horizontalEdges.equalToSuperview().inset(20.0)
             make.height.equalTo(20.0)
         }
         
-        loginButton.snp.makeConstraints { make in
-            make.bottom.equalTo(newAccountButton.snp.top).inset(-8.0)
+        registerButton.snp.makeConstraints { make in
+            make.bottom.equalTo(haveAccountButton.snp.top).inset(-8.0)
             make.horizontalEdges.equalToSuperview().inset(20.0)
             make.height.equalTo(45.0)
         }
@@ -155,12 +159,9 @@ final class RegisterVC: UIViewController {
         
     }
     
-    @objc private func loginDidTap() {
-//        viewModel.loginDidTap(email: emailTextField.text,
-//                              password: passwordTextField.text)
-    }
-    
-    @objc private func forgotPasswordDidTap() {
-//        viewModel.forgotPasswordDidTap(email: emailTextField.text)
+    @objc private func registerDidTap() {
+        presenter.registerDidTap(email: emailTextField.text,
+                                 password: passwordTextField.text,
+                                 repeatPassword: repeatPasswordTextField.text)
     }
 }
