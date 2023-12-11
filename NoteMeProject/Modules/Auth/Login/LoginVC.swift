@@ -36,6 +36,7 @@ final class LoginVC: UIViewController {
     
     private lazy var cancelButton: UIButton = .cancelButton()
     private lazy var logoImageView: UIImageView = UIImageView(image: .General.logo)
+    private lazy var titleLabel: UILabel = .titleLabel("Welcome back!")
     
     private lazy var infoView: UIView = {
         var view = UIView()
@@ -84,6 +85,7 @@ final class LoginVC: UIViewController {
         
         contentView.addSubview(loginButton)
         contentView.addSubview(newAccountButton)
+        contentView.addSubview(titleLabel)
         
         contentView.addSubview(infoView)
         infoView.addSubview(forgotPasswordtButton)
@@ -115,6 +117,11 @@ final class LoginVC: UIViewController {
             make.bottom.equalTo(newAccountButton.snp.top).inset(-8.0)
             make.horizontalEdges.equalToSuperview().inset(20.0)
             make.height.equalTo(45.0)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.horizontalEdges.centerX.equalToSuperview()
+            make.bottom.equalTo(infoView.snp.top).inset(-8.0)
         }
         
         infoView.snp.makeConstraints { make in
