@@ -16,6 +16,7 @@
 		803F04B52B234DAF00A8637F /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803F04B42B234DAF00A8637F /* LoginVM.swift */; };
 		803F04B72B234E2300A8637F /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803F04B62B234E2300A8637F /* LoginAssembler.swift */; };
 		80EAA8452B272A3100468DAD /* TitleLabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA8442B272A3100468DAD /* TitleLabel+Styles.swift */; };
+		80EAA8492B272DAD00468DAD /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA8482B272DAD00468DAD /* InputValidator.swift */; };
 		CE2BFAFE2AE042EE0024FFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */; };
 		CE2BFB002AE042EE0024FFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */; };
 		CE2BFB072AE042F00024FFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB062AE042F00024FFCE /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		803F04B42B234DAF00A8637F /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		803F04B62B234E2300A8637F /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
 		80EAA8442B272A3100468DAD /* TitleLabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TitleLabel+Styles.swift"; sourceTree = "<group>"; };
+		80EAA8482B272DAD00468DAD /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 		CE2BFAFA2AE042EE0024FFCE /* NoteMeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,22 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		80EAA8462B272D4000468DAD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				80EAA8472B272D5700468DAD /* InputValidator */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		80EAA8472B272D5700468DAD /* InputValidator */ = {
+			isa = PBXGroup;
+			children = (
+				80EAA8482B272DAD00468DAD /* InputValidator.swift */,
+			);
+			path = InputValidator;
+			sourceTree = "<group>";
+		};
 		CE2BFAF12AE042EE0024FFCE = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +153,7 @@
 				CE2BFB0B2AE042F00024FFCE /* Info.plist */,
 				CE9005CB2B1F20FE00B3EED9 /* Modules */,
 				CEE7D56E2AEADA27009769C4 /* Resource */,
+				80EAA8462B272D4000468DAD /* Services */,
 				8016D0A72B20A41D00BD8846 /* Styles */,
 				8016D0A42B20A2DC00BD8846 /* Utils */,
 			);
@@ -323,6 +342,7 @@
 				80EAA8452B272A3100468DAD /* TitleLabel+Styles.swift in Sources */,
 				CE9005CF2B1F219800B3EED9 /* LoginVC.swift in Sources */,
 				803F04B52B234DAF00A8637F /* LoginVM.swift in Sources */,
+				80EAA8492B272DAD00468DAD /* InputValidator.swift in Sources */,
 				CEE7D5762AEADEDC009769C4 /* UIImage + Consts.swift in Sources */,
 				803F04B72B234E2300A8637F /* LoginAssembler.swift in Sources */,
 				CEE7D5742AEADD72009769C4 /* UIFont + Consts.swift in Sources */,
