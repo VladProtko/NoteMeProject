@@ -18,8 +18,8 @@ protocol LoginAuthServiceUseCase {
 
 final class LoginVM: LoginViewModelProtocol {
     
-    var catchEmailError: ((String) -> Void)?
-    var catchPasswordError: ((String) -> Void)?
+    var catchEmailError: ((String?) -> Void)?
+    var catchPasswordError: ((String?) -> Void)?
     
     private let authService: LoginAuthServiceUseCase
     private let inputValidator: LoginInputValidatorUseCase
@@ -32,8 +32,9 @@ final class LoginVM: LoginViewModelProtocol {
     
     func loginDidTap(email: String?, password: String?) {
         guard inputValidator.validate(email: email) else { catchEmailError?("Wrong e-mail"); return }
+        catchEmailError?(nil)
         guard inputValidator.validate(password: password) else { catchPasswordError?("Non-valid password"); return }
-        
+        catchPasswordError?(nil)
         guard let email, let password else { return }
         authService.login(email: email,
                           password: password) { isSuccess in

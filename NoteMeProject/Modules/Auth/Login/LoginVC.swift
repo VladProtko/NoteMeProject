@@ -9,8 +9,8 @@ import UIKit
 import SnapKit
 
 protocol LoginViewModelProtocol {
-    var catchEmailError: ((String) -> Void)? { get set }
-    var catchPasswordError: ((String) -> Void)? { get set }
+    var catchEmailError: ((String?) -> Void)? { get set }
+    var catchPasswordError: ((String?) -> Void)? { get set }
 
     func loginDidTap(email: String?, password: String?)
     func newAccountDidTap()
