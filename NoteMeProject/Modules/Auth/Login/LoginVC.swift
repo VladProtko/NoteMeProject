@@ -8,12 +8,12 @@
 import UIKit
 import SnapKit
 
-protocol LoginViewModelProtocol {
+@objc protocol LoginViewModelProtocol: AnyObject {
     var catchEmailError: ((String?) -> Void)? { get set }
     var catchPasswordError: ((String?) -> Void)? { get set }
 
     func loginDidTap(email: String?, password: String?)
-    func newAccountDidTap()
+    @objc func newAccountDidTap()
     func forgotPasswordDidTap(email: String?)
 }
 
@@ -31,7 +31,7 @@ final class LoginVC: UIViewController {
     
     private lazy var newAccountButton: UIButton = 
         .underlineYellowButton("New Account")
-        .withAction(self, #selector(newAccountDidTap))
+        .withAction(viewModel, #selector(LoginViewModelProtocol.newAccountDidTap))
     
     private lazy var forgotPasswordtButton: UIButton = 
         .underlineGrayButton("Forgot Password")
@@ -92,16 +92,14 @@ final class LoginVC: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .appBlack
-        
         view.addSubview(contentView)
+        view.addSubview(loginButton)
+        view.addSubview(newAccountButton)
         
         contentView.addSubview(logoImageView)
-        
-        contentView.addSubview(loginButton)
-        contentView.addSubview(newAccountButton)
         contentView.addSubview(titleLabel)
-        
         contentView.addSubview(infoView)
+        
         infoView.addSubview(forgotPasswordtButton)
         infoView.addSubview(emailTextField)
         infoView.addSubview(passwordTextField)
@@ -163,10 +161,6 @@ final class LoginVC: UIViewController {
     @objc private func loginDidTap() {
         viewModel.loginDidTap(email: emailTextField.text,
                               password: passwordTextField.text)
-    }
-    
-    @objc private func newAccountDidTap() {
-        viewModel.newAccountDidTap()
     }
     
     @objc private func forgotPasswordDidTap() {

@@ -18,6 +18,7 @@
 		80EAA8452B272A3100468DAD /* TitleLabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA8442B272A3100468DAD /* TitleLabel+Styles.swift */; };
 		80EAA8492B272DAD00468DAD /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA8482B272DAD00468DAD /* InputValidator.swift */; };
 		80EAA84C2B2734D900468DAD /* InputValidator+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA84B2B2734D900468DAD /* InputValidator+Login.swift */; };
+		80EAA84F2B2742D500468DAD /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAA84E2B2742D500468DAD /* RegisterVC.swift */; };
 		CE2BFAFE2AE042EE0024FFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */; };
 		CE2BFB002AE042EE0024FFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */; };
 		CE2BFB072AE042F00024FFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2BFB062AE042F00024FFCE /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		80EAA8442B272A3100468DAD /* TitleLabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TitleLabel+Styles.swift"; sourceTree = "<group>"; };
 		80EAA8482B272DAD00468DAD /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 		80EAA84B2B2734D900468DAD /* InputValidator+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Login.swift"; sourceTree = "<group>"; };
+		80EAA84E2B2742D500468DAD /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		CE2BFAFA2AE042EE0024FFCE /* NoteMeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2BFAFD2AE042EE0024FFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2BFAFF2AE042EE0024FFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 			path = UseCasses;
 			sourceTree = "<group>";
 		};
+		80EAA84D2B2742BA00468DAD /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				80EAA84E2B2742D500468DAD /* RegisterVC.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		CE2BFAF12AE042EE0024FFCE = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9005CD2B1F216100B3EED9 /* Login */,
+				80EAA84D2B2742BA00468DAD /* Register */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -347,6 +358,7 @@
 				803F04B12B233B1400A8637F /* String+Localizable.swift in Sources */,
 				803F04B32B2349F000A8637F /* UIButton+Actions.swift in Sources */,
 				803F04A72B231FDF00A8637F /* LineTextField.swift in Sources */,
+				80EAA84F2B2742D500468DAD /* RegisterVC.swift in Sources */,
 				8016D0A92B20A47200BD8846 /* UIButton+Styles.swift in Sources */,
 				8016D0A62B20A36600BD8846 /* View+Layer.swift in Sources */,
 				CEE7D5722AEADB23009769C4 /* UIColor + Consts.swift in Sources */,

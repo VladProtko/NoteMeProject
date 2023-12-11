@@ -42,7 +42,9 @@ final class LoginVM: LoginViewModelProtocol {
         }
     }
     
-    func newAccountDidTap() { }
+    func newAccountDidTap() {
+        print("\(#function)")
+    }
     
     func forgotPasswordDidTap(email: String?) { }
 }
